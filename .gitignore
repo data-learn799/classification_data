@@ -1,0 +1,2 @@
+# 特定のファイルを除外（絶対パス）
+data-classifier/checkpoint-364/model.safetensors
