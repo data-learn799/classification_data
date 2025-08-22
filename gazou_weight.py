@@ -35,7 +35,13 @@ for param in model.classifier.parameters():
     param.requires_grad = True
 
 quantized_model = quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
-state_dict = torch.load(r'C:\Users\t1aok\Downloads\quantized_model.pth',map_location=torch.device('cpu'))
+
+# 現在のファイル（main.py）のパスを起点に相対パスを組み立てる
+weights_path = Path(__file__).parent / 'quantized_model.pth'
+
+# CPUでロード（GPU対応したいなら map_location を変更）
+state_dict = torch.load(weights_path, map_location=torch.device('cpu'))
+
 quantized_model.load_state_dict(state_dict)
 quantized_model.eval()
 
