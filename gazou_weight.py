@@ -2,6 +2,7 @@ import streamlit as st
 from transformers import pipeline
 from PIL import Image
 import torch
+from pathlib import Path
 from torch.quantization import quantize_dynamic
 
 # タイトル
