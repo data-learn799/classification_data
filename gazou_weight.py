@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import streamlit as st
 from transformers import pipeline
 from PIL import Image
@@ -128,5 +127,4 @@ if uploaded_file is not None:
     for result in results:
         label = result["label"]
         score = result["score"]
->>>>>>> d52df76edcc69d048a4379dacb30d8275cb2b3e9
         st.write(f"🔹 {label}: {score:.4f}")
