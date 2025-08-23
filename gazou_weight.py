@@ -69,4 +69,8 @@ if uploaded_file is not None:
     for result in results:
         label = result["label"]
         score = result["score"]
+<<<<<<< HEAD
         st.write(f"🔹 {label}: {score:.4f}")
+=======
+        st.write(f"🔹 {label}: {score:.4f}")
+>>>>>>> b4123277084f750e6412b6769c825fcea3e96997
